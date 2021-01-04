@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><h1>AWS Serverless</h1></section>
+				<section>
+					<h2>Agenda</h2>
+					<p>What is serverless computing?</p>
+					<p>Why use serverless computing?</p>
+					<p>What are the benefits of serverless computing?</p>
+					<p>How do I build a serverless application?</p>
+					<p>Serverless Application Use Cases</p>
+					<p>Serverless Architecture</p>
+					<p>Pros and Cons</p>
+				</section>
+				<section id="fragments">
+					<h3>What is serverless?</h3>
+					<p class="fragment">Serverless technology is language-based. Some of the languages supported currently include:</p>
+					<ul class="fragment">
+						<li>NodeJS</li>
+						<li>Python</li>
+						<li>C#</li>
+						<li>Java</li>
+						<li>Golang</li>
+					</ul>
+				</section>
+				<section>
+					<section>
+						<h3>Serverless applications have four main benefits.</h3>
+						<ul>
+							<li>No server management</li>
+							<li>Flexible scaling</li>
+							<li>Automated high availabilty</li>
+							<li>No idle capacity</li>
+						</ul>
+					</section>
+					<section>
+						<h4>No server management</h4>
+						<p>There is no need to provision or maintain any servers. There is no software or runtime to install, maintain, or administer.</p>
+					</section>
+					<section>
+						<h4>Flexible scaling</h4>
+						<p>Your application can be scaled automatically or by adjusting its capacity through toggling the units of consumption (e.g. throughput, memory) rather than units of individual servers.</p>
+					</section>
+					<section>
+						<h4>High availability</h4>
+						<p>Serverless applications have built-in availability and fault tolerance. You do not need to architect for these capabilities since the services running the application provide them by default.</p>
+					</section>
+					<section>
+						<h4>No idle capacity</h4>
+						<p>You do not have to pay for idle capacity. There is no need to pre- or over-provision capacity for things like compute and storage. For example, there is no charge when your code is not running.</p>
+					</section>
+					<!-- <section class="fragment"></section> -->
+				</section>
+				<section>
+					<section>
+						<h3>Use Cases</h3>
+						<ul>
+							<li>Microservices</li>
+							<li>Background API calls</li>
+							<li>Bots</li>
+							<li>Image Compression</li>
+							<li>File Upload</li>
+							<li>And more...</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Web applications and backends</h3>
+						<img style="background-color: white;" data-natural-width="1000" data-natural-height="301" data-lazy-loaded="" src="https://s3.amazonaws.com/media-p.slid.es/uploads/877567/images/4908138/Lambda_WebApplications.2139ddbc8a84f5564ee5846995f28c88e9db5c2d.png">
+					</section>
+					<section>
+						<h3>Data processing</h3>
+						<img style="background-color: white;" data-natural-width="1000" data-natural-height="300" data-lazy-loaded="" src="https://s3.amazonaws.com/media-p.slid.es/uploads/877567/images/4908162/Lambda_FileProcessing.c0915267504e6d2e82d43268f3df408bbab08af9.png">
+					</section>
+				</section>
+				<section>
+					<h4>Anatomy of an AWS Serverless Application</h4>
+					<ul>
+						<li>API Gateway (Optional)</li>
+						<li>Lambda Function:
+							<ul>
+							<li>Code</li>
+							<li>Function Handler</li>
+							<li>Function Name</li>
+						</ul>
+					</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Example Serverless Application Architecture</h3>
+					<img style="background-color: white;" data-natural-width="900" data-natural-height="500" data-lazy-loaded="" src="https://s3.amazonaws.com/media-p.slid.es/uploads/877567/images/4906505/Serverless_Web_App.png">
+				</section>
+				<section>
+					<section id="fragments">
+						<h3>Pros</h3>
+						<ul>
+							<li class="fragment">Fast and Easy to Deploy (when using a Framework)</li>
+							<li class="fragment">No need to worry about server resources</li>
+							<li class="fragment">No need to worry about server maintenance and updates</li>
+							<li class="fragment">Helps to scale from thousands to millions of calls without any form of intervention</li>
+							<li class="fragment">Improves release frequency and lead time for changes</li>
+							<li class="fragment">Provides a homogenous architecture for the full Software Development Life Cycle</li>
+						</ul>
+					</section>
+					<section id="fragments">
+						<h3>... and Cons</h3>
+						<ul>
+							<li class="fragment">Does not apply to all use cases of software delivery</li>
+							<li class="fragment">No access to the underlying infrastructure</li>
+							<li class="fragment">There is no visible system metrics</li>
+							<li class="fragment">Has a timeout to run a function</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<h3>Conclusion</h3>
+					<p>Serverless is not the silver bullet to building APIs but it holds great promise in the world of APIs as from the advantages that I have stated.
+
+						Adoption of this will help us to improve delivery and drive down cost drastically.</p>
+						<p>Thank you</p>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
